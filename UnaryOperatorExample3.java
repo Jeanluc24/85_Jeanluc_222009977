@@ -1,4 +1,4 @@
-class UnaryOperatorExample {
+class UnaryOperatorExample3 {
     public static void main(String args[]) {
         // Declare integer variables 'a' and 'b' with values 10 and -10, respectively.
         int a = 10;
