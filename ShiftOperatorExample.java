@@ -17,8 +17,8 @@ class ShiftOperatorExample {
         System.out.println(-20 >> 2);  // Prints -5
 
         // Negative number -20 in binary: 11101100 (in two's complement)
-        // Shifting 2 bits to the right: 00111011 (in decimal, it's 59)
-        System.out.println(-20 >>> 2);  // Prints 59
+        // Shifting 2 bits to the right: 001111111111111111111111111111 (in decimal, it's 1073741819)
+        System.out.println(-20 >>> 2);  // 1073741819
     }
 }
 
