@@ -1,5 +1,5 @@
 public class NestedLoop {
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         // Outer loop: Iterate from 1 to 10 for the dividend 'i'.
         for (int i = 1; i <= 10; i++) {
             // Inner loop: Iterate from 1 to 10 for the divisor 'j'.
