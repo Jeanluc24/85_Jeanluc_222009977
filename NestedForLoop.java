@@ -1,5 +1,5 @@
 class NestedForLoop {
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         // Initialize a variable 'num' with the value 1.
         int num = 1;
 
