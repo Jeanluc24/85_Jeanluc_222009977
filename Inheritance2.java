@@ -1,66 +1,59 @@
-// Interface for payment methods
-interface PaymentMethod {
-  // Declare method to make a payment
-  boolean makePayment(double amount);
-
-  // Declare method to get the account balance
-  double getBalance();
+// Define an Animal interface with a method called sound
+interface Animal {
+    void sound();
 }
 
-// Card class implementing the PaymentMethod interface
-class Card implements PaymentMethod {
-  // Private field to store the card number
-  private int cardNumber;
-
-  // Private field to store the account balance
-  private double balance;
-
-  // Constructor to initialize the card number and initial balance
-  public Card(int cardNumber, double initialBalance) {
-    this.cardNumber = cardNumber;
-    this.balance = initialBalance;
-  }
-
-  // Implement the getBalance() method to return the account balance
-  @Override
-  public double getBalance() {
-    return balance;
-  }
-
-  // Implement the makePayment() method to process payments
-  @Override
-  public boolean makePayment(double amount) {
-    if (amount > 0 && balance >= amount) {
-      balance -= amount;
-      System.out.println("Payment of $" + amount + " successful. New balance: $" + balance);
-      return true;
-    } else {
-      System.out.println("Insufficient funds. Payment failed.");
-      return false;
+// Define the Cow class that implements the Animal interface
+class Cow implements Animal {
+    // Implement the sound method for Cow
+    public void sound() {
+        System.out.println("Cows moo");
     }
-  }
 }
 
-// Main class to demonstrate the Tap & Go system
-public class Inheritance2 {
-  public static void main(String[] args) {
-    // Create two Card objects representing different cards
-    PaymentMethod card1 = new Card(123456789, 100.0);
-    PaymentMethod card2 = new Card(987654321, 50.0);
+// Define the Horse class that implements the Animal interface
+class Horse implements Animal {
+    // Implement the sound method for Horse
+    public void sound() {
+        System.out.println("Horses neigh");
+    }
+}
 
-    // Display the initial balances of both cards
-    System.out.println("Card 1 balance: $" + card1.getBalance());
-    System.out.println("Card 2 balance: $" + card2.getBalance());
+// Define the Cat class that implements the Animal interface
+class Cat implements Animal {
+    // Implement the sound method for Cat
+    public void sound() {
+        System.out.println("Cats meow");
+    }
+}
 
-    // Make payments using the makePayment() method
-    System.out.println("Making payments:");
-    card1.makePayment(25.0);
-    card2.makePayment(40.0);
-    card1.makePayment(80.0);
+// Define the Dog class that implements the Animal interface
+class Dog implements Animal {
+    // Implement the sound method for Dog
+    public void sound() {
+        System.out.println("Dogs bark");
+    }
+}
 
-    // Display the updated balances of both cards
-    System.out.println("Updated balances:");
-    System.out.println("Card 1 balance: $" + card1.getBalance());
-    System.out.println("Card 2 balance: $" + card2.getBalance());
-  }
+public class AnimalTest {
+    public static void main(String[] args) {
+        // Create objects of each class
+        Animal cow = new Cow();
+        Animal horse = new Horse();
+        Animal cat = new Cat();
+        Animal dog = new Dog();
+
+        // Call the sound method on each object
+        System.out.println("Cow:");
+        cow.sound();
+
+        System.out.println("Horse:");
+        horse.sound();
+
+        System.out.println("Cat:");
+        cat.sound();
+
+        System.out.println("Dog:");
+        dog.sound();
+    }
 }
