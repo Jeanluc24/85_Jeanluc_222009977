@@ -1,0 +1,14 @@
+Exam of Java 
+
+1. Create a registration form using NetBeans 
+
+2. Connect the registration form with the XAMPP server using MySQL
+
+3. Create a database and table in XAMPP which will record the database for those who will register on our created form
+
+4. Create a database connection in NetBeans which will connect XAMPP and Netbeans.
+
+5. Create a login form in NetBeans that will use the Registration database to give access to anyone who has an account but if you don't have an account the system will direct you to the register page for registration
+
+6. Create a dashboard for those who have entered their account successfully to go directly to the dashboard.
+
